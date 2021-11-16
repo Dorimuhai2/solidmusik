@@ -19,13 +19,13 @@ async def pm_start(_, message: Message):
     user_id = message.from_user.id
     if message.chat.type == "private":
         if len(message.command) == 1:
-            return await bot.send_message(
-                message,
-                "pm_greet",
-                format_key=str(mention),
-                markup=start_markup(chat_id, bot_username),
-                reply_message=True,
-            )
+           # return await bot.send_message(
+               # message,
+               # "pm_greet",
+               # format_key=str(mention),
+               # markup=start_markup(chat_id, bot_username),
+               # reply_message=True,
+               # )
         if len(message.command) >= 2:
             query = message.command[1]
             if query.startswith("ytinfo_"):
